@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+ SPSX-FileCopyrightText: 2024 Taisei Suzuki
 import sys
 
 ans = 0
