@@ -1,5 +1,7 @@
 #!/usr/bin/python3
- SPSX-FileCopyrightText: 2024 Taisei Suzuki
+#SPSX-FileCopyrightText: 2024 Taisei Suzuki
+# SPDX-License-Identifier: BSD-3-Clause
+
 import sys
 
 ans = 0
