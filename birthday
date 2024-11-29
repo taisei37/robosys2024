@@ -1,0 +1,37 @@
+#!/usr/bin/python3
+# SPSX-FileCopyrightText: 2024 Taisei Suzuki
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+
+def number_to_word():
+    stones = [
+        "ガーネット", "アメジスト", "アクアマリン", "ダイヤモンド",
+        "エメラルド", "パール", "ルビー", "ペリドット",
+        "サファイア", "オパール", "トパーズ", "ターコイズ"
+    ]
+
+    print("あなたの誕生月を入力してください。")
+
+    for line in sys.stdin:
+        user_input = line.strip()
+
+        if not user_input:
+            print("エラー: 有効な数字を入力してください。")
+            break
+
+        try:
+            month = int(user_input)
+            if 1 <= month <= 12:
+                stone = stones[month - 1]
+                print(f"あなたの誕生月は: {month}月")
+                print(f"誕生石: {stone}")
+            else:
+                print("エラー: 月は1から12の範囲で入力してください。")
+        except ValueError:
+            print("エラー: 有効な数字を入力してください。")
+        break
+
+if __name__ == "__main__":
+    number_to_word()
+
