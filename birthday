@@ -4,34 +4,31 @@
 
 import sys
 
-def number_to_word():
+def main():
     stones = [
         "ガーネット", "アメジスト", "アクアマリン", "ダイヤモンド",
         "エメラルド", "パール", "ルビー", "ペリドット",
         "サファイア", "オパール", "トパーズ", "ターコイズ"
     ]
 
-    print("あなたの誕生月を入力してください。")
+    user = sys.stdin.read().strip()
+ 
+    if not user:
+        print("エラー: 有効な数字を入力してください。")
+        return
 
-    for line in sys.stdin:
-        user_input = line.strip()
+    try:
+        month = int(user)
 
-        if not user_input:
-            print("エラー: 有効な数字を入力してください。")
-            break
+        if 1 <= month <= 12:
+            stone = stones[month - 1]
 
-        try:
-            month = int(user_input)
-            if 1 <= month <= 12:
-                stone = stones[month - 1]
-                print(f"あなたの誕生月は: {month}月")
-                print(f"誕生石: {stone}")
-            else:
-                print("エラー: 月は1から12の範囲で入力してください。")
-        except ValueError:
-            print("エラー: 有効な数字を入力してください。")
-        break
+            print(f"あなたの誕生月は: {month}月")
+            print(f"誕生石: {stone}")
+        else:
+            print("エラー: 月は1から12の範囲で入力してください。")
+    except ValueError:
+        print("エラー: 有効な数字を入力してください。")
 
 if __name__ == "__main__":
-    number_to_word()
-
+    main()

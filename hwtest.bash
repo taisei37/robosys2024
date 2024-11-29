@@ -9,15 +9,15 @@ ng() {
 
 res=0
 
-# テストケース 1: 有効な月 (1～12)
+# テストケース 1: 有効な数字 (1～12)
 out=$(echo 1 | ./birthday)
 exp=$(printf "あなたの誕生月は: 1月\n誕生石: ガーネット")
 if [ "$out" != "$exp" ]; then
     ng "$LINENO"
 fi
 
-# テストケース 2: 範囲外の数字 (13)
-out=$(echo 13 | ./birthday)
+# テストケース 2: 範囲外の数字 (0)
+out=$(echo 0 | ./birthday)
 exp="エラー: 月は1から12の範囲で入力してください。"
 if [ "$out" != "$exp" ]; then
     ng "$LINENO"
