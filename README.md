@@ -21,34 +21,47 @@
 
 
 -1.このリポジトリをクローン
-'''https://github.com/taisei37/robosys2024.git'''
+'''
+https://github.com/taisei37/robosys2024.git
+'''
 -2.ディレクトリの移動
-'''cd robosys2024'''
+'''
+cd robosys2024
+'''
 -3.birthdayの実行
 
 実行方法
-'''echo <整数>　| ./birthday'''
+'''
+echo <整数>　| ./birthday
+'''
 
 適切な入力例
-'''echo 1　| ./birthday'''
+'''
+echo 1　| ./birthday
 ###実行結果###
 あなたの誕生月は: 1月
 誕生石: ガーネット
+'''
 
 不適切な入力例１
-'''echo 0　| ./birthday'''
+'''
+echo 0　| ./birthday
 ###実行結果###
 エラー: 月は1から12の範囲で入力してください。
+'''
 
 不適切な入力例2
-'''echo 0　| ./birthday'''
+'''
+echo 0　| ./birthday
 ###実行結果###
 エラー: 有効な数字を入力してください。
+'''
 
 ## サンプルコードとコードの解説
-'''#!/usr/bin/python3
-# SPSX-FileCopyrightText: 2024 Taisei Suzuki
-# SPDX-License-Identifier: BSD-3-Clause
+'''
+   #!/usr/bin/python3
+   #SPSX-FileCopyrightText: 2024 Taisei Suzuki
+   #SPDX-License-Identifier: BSD-3-Clause
 
 import sys
 
@@ -83,7 +96,8 @@ def main():
         print("エラー: 有効な数字を入力してください。")
 
 if __name__ == "__main__":
-    main()'''
+    main()
+'''
 ## ライセンスと著作権
 
 このソフトウェアパッケージは３条項BSDライセンスの下、再頒布および使用が許可されてされています。
