@@ -24,7 +24,7 @@
 - 1.このリポジトリをクローン
 
 ```
-https://github.com/taisei37/robosys2024.git
+git clone https://github.com/taisei37/robosys2024.git
 ```
 
 - 2.ディレクトリの移動
