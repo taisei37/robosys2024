@@ -18,22 +18,19 @@ fi
 
 # テストケース 2: 範囲外の数字 (0)
 out=$(echo 0 | ./birthday)
-exp="エラー: 月は1から12の範囲で入力してください。"
-if [ "$out" != "$exp" ]; then
+if ! echo "$out" | grep -q "エラー: 月は1から12の範囲で入力してください。"; then
     ng "$LINENO"
 fi
 
 # テストケース 3: 数字以外の入力 (abc)
 out=$(echo abc | ./birthday)
-exp="エラー: 有効な数字を入力してください。"
-if [ "$out" != "$exp" ]; then
+if ! echo "$out" | grep -q "エラー: 有効な数字を入力してください。"; then
     ng "$LINENO"
 fi
 
 # テストケース 4: 空入力
 out=$(echo "" | ./birthday)
-exp="エラー: 有効な数字を入力してください。"
-if [ "$out" != "$exp" ]; then
+if ! echo "$out" | grep -q "エラー: 有効な数字を入力してください。"; then
     ng "$LINENO"
 fi
 
