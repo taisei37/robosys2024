@@ -1,7 +1,7 @@
-# robosys2024
-[![test](https://github.com/taisei37/robosys2024/actions/workflows/test.yml/badge.svg)](https://github.com/taisei37/robosys2024/actions/workflows/test.yml)
+#robosys2024
 ロボットシステム学授業用(課題1)
 # 誕生石を教えるコマンド
+[![test](https://github.com/taisei37/robosys2024/actions/workflows/test.yml/badge.svg)](https://github.com/taisei37/robosys2024/actions/workflows/test.yml)
 このリポジトリは、誕生石を教えるコマンドです。入力された月に応じてその月の誕生石を表示します。入力に相応しくない値が入力された際、エラーメッセージが表示されるようになっています。その他動作確認のテストスプリクト（hwtest.bash）も含まれています。
 
 ## 機能
