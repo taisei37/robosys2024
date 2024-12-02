@@ -15,7 +15,7 @@ def main():
 
     if not user:
         print("エラー: 有効な数字を入力してください。", file=sys.stderr)
-        sys.exit(1)  # エラー終了ステータス1を返す
+        sys.exit(1)
 
     try:
         month = int(user)
@@ -27,10 +27,10 @@ def main():
             print(f"誕生石: {stone}")
         else:
             print("エラー: 月は1から12の範囲で入力してください。", file=sys.stderr)
-            sys.exit(1)  # エラー終了ステータス2を返す
+            sys.exit(1)
     except ValueError:
         print("エラー: 有効な数字を入力してください。", file=sys.stderr)
-        sys.exit(1)  # エラー終了ステータス3を返す
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
