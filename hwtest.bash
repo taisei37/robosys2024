@@ -10,28 +10,28 @@ ng() {
 res=0
 
 # テストケース 1: 有効な数字 (1～12)
-out=$(echo 1 | ./birthday 2>/dev/null)
+out=$(echo 1 | ./birthday)
 exp=$(printf "あなたの誕生月は: 1月\n誕生石: ガーネット")
 if [ "$out" != "$exp" ]; then
     ng "$LINENO"
 fi
 
 # テストケース 2: 範囲外の数字 (0)
-out=$(echo 0 | ./birthday 2>&1 >/dev/null)
+out=$(echo 0 | ./birthday)
 exp="エラー: 月は1から12の範囲で入力してください。"
 if [ "$out" != "$exp" ]; then
     ng "$LINENO"
 fi
 
 # テストケース 3: 数字以外の入力 (abc)
-out=$(echo abc | ./birthday 2>&1 >/dev/null)
+out=$(echo abc | ./birthday)
 exp="エラー: 有効な数字を入力してください。"
 if [ "$out" != "$exp" ]; then
     ng "$LINENO"
 fi
 
 # テストケース 4: 空入力
-out=$(echo "" | ./birthday 2>&1 >/dev/null)
+out=$(echo "" | ./birthday)
 exp="エラー: 有効な数字を入力してください。"
 if [ "$out" != "$exp" ]; then
     ng "$LINENO"
